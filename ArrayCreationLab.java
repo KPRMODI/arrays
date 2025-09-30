@@ -19,6 +19,7 @@ public class ArrayCreationLab {
         return scanner.nextLine();
     }
 
+    @SuppressWarnings("StringEquality")
      public static void main (String[] args) {
         // PART 1
         int[] scores; // initializes Scores array
@@ -54,8 +55,11 @@ public class ArrayCreationLab {
 
         System.out.print("Your favorite foods are: ");
         for (String food: foods) { // enhanced for loop for all values in array
-            System.out.print(food + " ");
+            if (food == foods[foods.length-1]) {
+                System.out.print(food);
             }
+            else {System.out.print(food + ", ");}
+        }
         System.out.println();
     }
 }
