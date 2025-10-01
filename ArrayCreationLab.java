@@ -49,7 +49,7 @@ public class ArrayCreationLab {
         scanner.nextLine(); // clears buffer due to different inputs
 
         for (int i = 0; i < numberOfFoods; i++) { // for loop for asking the user what foods they want in their array
-            String fooditem = getInput("Enter food item: "); // input
+            String fooditem = getInput("Enter food item " + (i + 1) + ": "); // input
             foods[i] = fooditem; // sets the value to the users food item
         }
 
